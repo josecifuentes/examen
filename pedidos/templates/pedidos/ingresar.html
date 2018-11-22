@@ -1,0 +1,23 @@
+{% extends 'pedidos/base.html' %}
+{% block content %}
+    <div class="basic-form-area mg-b-15">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                        <div class="sparkline8-list mt-b-30">
+                            <div class="sparkline8-hd">
+                                <div class="main-sparkline8-hd">
+                                    <h1>Platos</h1>
+                                </div>
+                            </div>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Guardar</button>
+    </form>
+    </div>
+                    </div>
+                </div>   
+            </div>   
+        </div>
+
+{% endblock %}

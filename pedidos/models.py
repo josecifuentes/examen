@@ -119,3 +119,11 @@ class ComidaInLine(admin.TabularInline):
 #muestra un campo extra al momento de insertar, como indicación que se pueden ingresar N actores.
 
     extra = 1
+class MenuAdmin(admin.ModelAdmin):
+
+    inlines = (ComidaInLine,)
+
+
+class PlatoAdmin (admin.ModelAdmin):
+
+    inlines = (ComidaInLine,)
